@@ -77,4 +77,42 @@ This tells user whenever you visit homepage you will get this message "Hello use
 
 (vi)app.route -> Pages must be unique, readable and every function must return something.
 
+->HTTPS Method(Get and Post)
+(i)Get
+Where you get some information.
+(I want some information)
+(ii)Post
+Where you want to submit some information.
+(I am sending some data process it)
+
+->>Syntax in flask -- How to use Get and Post
+@app.route("/submit, methods = ["GET", "POST"])
+def submit():
+    if request.method == "POST":
+        return "You sent data!"
+    else:
+        return "You are just viewing the form."
+
+->>Terminology
+(i)request -> Read what the user sends {request.form["name"] from a form}
+
+(ii)response -> Send something back to the user {return Response(), Flask will automatically wrap this into a response object and send it back to the user}
+For example:- You go on a bakery and ask for a break and the shopkeeper give it you(Simple)
+
+(iii)redirect -> Move the user to a different page{redirect("/thankyou")}
+
+(iv)url_for -> Build a route dynamicaly from function name (It builds a full url to a specific function or a specific page inside your app) {url_for("home") -> "/home"}
+For example:-
+Suppose you want to go your friend house, instead of saying the address like this (123 Gupta Nagar 3rd room B-12). If you will say like this than no one will be able to understand. If you will say "mujhe Sharma ji ke ghr jana hai" than everyone will understand it.
+So basically, system will found full_address for you. There are three reasons for using this:-
+    (i)You don't have to learn urls
+    (ii)If your url is changed than it will work there also(url_for())
+    (iii)Url is broken(It will save you from that also)
+
+(v)sessions -> Remember user info across pages
+It is built-in dictionary which remembers information about one user across the pages.
+For example:-
+Suppose you go on a shopping mall and you are a regular customer. Mall employess suggested you that you can take membership card which will benefit you. So, whenever you will go on shopping after taking the membership, system will know automatically that you are a premium memeber of our mall.
+(If a user is logging in, their name must be remembered, in the amazon cart also, whenever you put items in the cart it remembers you that you have put it something inside the cart)
+
 
