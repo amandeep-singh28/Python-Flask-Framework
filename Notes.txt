@@ -45,3 +45,36 @@ Server -> The computer that stores and runs the website
 (Suppose you want to print Hello World you can easily do that but if you want to showcase it onto a web page than you have to figure out many things(Manual Connection creation, How browser is sending the message))
 (ii)There are no buttons, pages and login forms in python.
 (iii)You have to build everything from the scratch(even for a simple form)
+
+
+****First Phase****
+(i)app = Flask(__name__) # We have created object as "app" name. This object will represent our website.
+# __name__ -> It will tell flask that this is our main flask file
+
+(ii)@app.route("/") # @ -> It is called as route decorator. It is telling flask that whenever someone tries to visit home page, whatever we will do below it you have to run that code
+
+(iii)Meaning of app.route -> Basically it is used to read a specific web page or a function
+
+(iv)Meaning of "http://127.0.0.1:5000"
+--http:// -> Communication protocol used to talk between browser and web server
+--127.0.0.1 -> IP address of our computer(Local Host)
+--5000 -> Port number where your flask is runnning
+
+(v)We can create multiple web pages through app.route like home page, contact us page. For example:-
+    @app.route("/")
+    def home():
+        return "Hello user! This is my first flask app"
+
+    @app.route("/about")
+    def about():
+        return "This is about us page"
+
+    @app.route("/contact")
+    def contact():
+        return("This is a contact us page")
+
+This tells user whenever you visit homepage you will get this message "Hello user! This is my first flask app" and on about us page "This is about us page". Similarly on contact us page "This is a contact us page".
+
+(vi)app.route -> Pages must be unique, readable and every function must return something.
+
+
