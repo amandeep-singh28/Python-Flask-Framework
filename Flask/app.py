@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -13,3 +13,10 @@ def about():
 @app.route("/contact")
 def contact():
     return("This is a contact us page")
+
+@app.route("/submit", methods = ["GET", "POST"])
+def submit():
+    if request.method == "POST":
+        return "You sent data!"
+    else:
+        return "You are just viewing the form."
