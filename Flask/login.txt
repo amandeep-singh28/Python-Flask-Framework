@@ -1,0 +1,6 @@
+--Mini Project (Task 1)
+(i)login page
+(ii)accept username and password
+(iii)session store(username and password)
+(iv)If the login is successful(redirect welcome page)
+(v)Inside the welcome page -> Feature Logout
