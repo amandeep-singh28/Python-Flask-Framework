@@ -1,0 +1,47 @@
+****Understand Web Interactions****
+
+Difference between HTTP and HTTPS
+->Scenario
+Suppose you want to send a letter through post office. The first thing you will do is:-
+    (i)Write a letter(Message) -> Request
+    (ii)Address -> URL
+    (iii)When the letter is arrived to your friend(Reply) -> Response
+This is how web browser talks to website
+
+HTTP -> Hyper text transfer protocol(This is the language which is used by the browser to talk to the website)
+(Basically it is a type of rule which browser and website follows to understand each other)
+                            +
+                        Security
+
+HTTPS -> Hyper text transfer protocol secure(It means the data which you will provide to the website will be secure. No other person would be able to steal your data)
+
+
+->What is URL
+Uniform resourse locator. Suppose you want to go on a specific page.
+https://www.amazon.com/products
+https://www.amazon.com/products/laptop
+
+->Summary
+Restaurant -> Website
+You -> Browser(Client)
+Restaurant address -> URL
+Waiter -> Request
+Kitchen -> Server
+Cook -> Backend code
+Meal -> Response
+Bill / Receipt -> Status code
+
+->Final Summary
+HTTP/HTTPS -> Rules for communication between browser and Server
+Request -> Your browser asking for something(a page, data)
+Response -> The server's reply with what you asked for
+Status codes -> A code that tells you if the request worked or failed
+Browser -> The software you use to access websites
+URL -> The address of a webpage
+Server -> The computer that stores and runs the website
+
+->Why Python alone is not sufficient??
+(i)Python alone cannot talk to a browser.
+(Suppose you want to print Hello World you can easily do that but if you want to showcase it onto a web page than you have to figure out many things(Manual Connection creation, How browser is sending the message))
+(ii)There are no buttons, pages and login forms in python.
+(iii)You have to build everything from the scratch(even for a simple form)
