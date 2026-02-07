@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+</head>
+<body>
+    <h1>Hello {{ name }}</h1>
+    {% if is_topper %}
+        <p>You are a topper very good</p>
+    {% else %}
+        <p>You need to work hard</p>
+    {% endif %}
+
+    <h3>Your subjects</h3>
+    <ul>
+        {% for subject in subjects %}
+        <li>{{ subject }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
