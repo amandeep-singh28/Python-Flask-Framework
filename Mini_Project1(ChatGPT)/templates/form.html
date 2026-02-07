@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Submit Result{% endblock %}
+
+{% block content %}
+<h2>Enter Student Details</h2>
+
+<form method="POST">
+    <label>Student Name:</label><br>
+    <input type="text" name="student_name" placeholder="Enter your name" required><br><br>
+
+    <label>Marks:</label><br>
+    <input type="number" name="marks" placeholder="Enter your marks" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

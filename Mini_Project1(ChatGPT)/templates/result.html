@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<h2>Result</h2>
+
+<p>Hello <strong>{{ name }}</strong></p>
+<p>Marks Scored: {{ marks }}</p>
+
+{% if result == "Topper" %}
+    <p style="color: green;">Excellent performance! You are a topper 🎉</p>
+{% elif result == "Pass" %}
+    <p style="color: blue;">You have passed 👍</p>
+{% else %}
+    <p style="color: red;">Better luck next time ❌</p>
+{% endif %}
+{% endblock %}
