@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form action="/submit" method="POST">
-        <label>Username</label>
-        <input type="text" name="username" placeholder="Enter username"> <br> <br>
+{% extends "base.html"}
 
-        <label>Password</label>
-        <input type="text" name="password" placeholder="Enter password"> <br> <br>
-
-        <input type="submit" value="login">
-    </form>
-</body>
-</html>
+{% block content %}
+<h1>This is home page</h1>
+{% endblock %}
