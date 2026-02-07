@@ -116,3 +116,63 @@ Suppose you go on a shopping mall and you are a regular customer. Mall employess
 (If a user is logging in, their name must be remembered, in the amazon cart also, whenever you put items in the cart it remembers you that you have put it something inside the cart)
 
 
+****Second Phase:- Building Dynamic Web Pages****
+Suppose you are creating a website for a school. Suppose you want to showcase the result of students whenever a student login into the website.
+(Hello Amit. You are a class topper)
+There will be other students also other than Amit. So, you will not create 1000s of html file to complete this task. This is where JINJA templates takes command.
+
+->What is JINJA template??
+It is a tool in which you can use it to showcase python variables in the html pages
+
+(i)Python values
+{{ variable }}
+{{ name }}
+For example:
+<p> Welcome {{name}} </p>
+
+(ii)Conditionals
+{% if %}...{% endif %}
+For example:
+is_topper = True
+{% if is_topper %}
+    <p> You are a topper </p>
+{% else %}
+    <p> You need to work hard </p>
+{% endif %}
+
+->Template Inheritance
+Suppose you are making a website in which there are multiple pages (about us, contact us, etc). If this is a website than the layout will be same for other pages also.
+Header and footer will be same for all other pages. The only change will be content, if you are in about us page than other content, contact us page than some other content.
+If you are coding without Inheritance than you have to create the same layout for every page which will increase the code.
+
+--Write some code in the base file
+--Use that base file in other child classes
+--In the child file use extends(It will know than you are using the code from base.html file)
+
+->>Syntax
+(i)base.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} My Website {% endblock %}</title>
+</head>
+<body>
+    <header>....</header>
+        {% block content %}
+            <!--=====Start Section=====-->
+
+            <!--=====End Section=====-->
+        {% endblock %}
+
+    <footer>....</footer>
+</body>
+</html>
+
+(ii)Child class
+{% extends "base.html"}
+
+{% block content %}
+<h1>This is home page</h1>
+{% endblock %}
