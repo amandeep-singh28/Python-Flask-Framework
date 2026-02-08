@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} My Website {% endblock %}</title>
+    <title>{% block title %}My Feedback Site{% endblock %}</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif; padding : 20px;
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-        header{
-            background: #333; color: white; padding: 10px;
+        header, footer {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
         }
-        footer{
-            background: yellow; padding: 10px ; margin-top: 20px;
+        nav a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: solid 5px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h2>My Site</h2>
+        <h1>Feedback Page</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
+            <a href="/feedback">Feedback</a>
         </nav>
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %} {% endblock %}
+    </main>
 
     <footer>
-        <p>My name is Amandeep Singh</p>
+        <p>
+            &copy;2025 CODINGWISE SITE
+        </p>
     </footer>
 </body>
 </html>
